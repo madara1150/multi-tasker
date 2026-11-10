@@ -1,0 +1,25 @@
+appId: com.madara1150.baton
+productName: Baton
+copyright: Copyright (c) 2026 Tanathip
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - out/**
+  - package.json
+mac:
+  icon: assets/icon-1024.png
+  category: public.app-category.developer-tools
+  target:
+    - target: dmg
+      arch: arm64
+  artifactName: Baton-macOS.${ext}
+win:
+  icon: assets/icon-1024.png
+  artifactName: Baton-Windows-Portable.${ext}
+  target:
+    - nsis
+    - zip
+nsis:
+  artifactName: Baton-Windows-Setup.${ext}
+  oneClick: false

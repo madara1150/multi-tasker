@@ -1,0 +1,40 @@
+{
+  "name": "baton",
+  "productName": "Baton",
+  "version": "0.1.0",
+  "description": "Run a team of Claude Code agents in parallel, each in its own git worktree",
+  "author": "Tanathip",
+  "license": "MIT",
+  "private": true,
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "icon": "electron tools/make-icon.cjs",
+    "screenshots": "electron-vite build && node tools/screenshots.mjs",
+    "dist:mac": "electron-vite build && electron-builder --mac dmg",
+    "dist:win": "electron-vite build && electron-builder --win nsis zip"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.7",
+    "vitest": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madara1150/multi-tasker.git"
+  },
+  "homepage": "https://github.com/madara1150/multi-tasker"
+}
